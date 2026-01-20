@@ -9,14 +9,14 @@
 
 <audio id="vineBoom" src="https://www.myinstants.com/media/sounds/vine-boom.mp3"></audio>
 
-<div style="text-align: center; background-color: white; padding: 30px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; width: 320px; z-index: 5;">
-    <h1 style="margin: 0; color: #555; font-size: 1.5rem; letter-spacing: 1px;">POTASSIUM CLICKER</h1>
-    <hr style="border: 0; height: 1px; background: #eee; margin: 15px 0;">
-    <h2 id="scoreWrapper" style="color: #8b4513; font-size: 1.5rem; margin-bottom: 10px;">
+<div style="text-align: center; background-color: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; width: 350px; z-index: 5;">
+    <h1 style="margin: 0; color: #555; letter-spacing: 1px; font-size: 1.8rem;">POTASSIUM CLICKER</h1>
+    <hr style="border: 0; height: 1px; background: #eee; margin: 20px 0;">
+    <h2 id="scoreWrapper" style="color: #8b4513; font-size: 2rem; margin-bottom: 10px;">
         <span id="score">0</span>
-        <div style="font-size: 0.7rem; color: #a0522d; margin-top: 5px; font-weight: bold;">POTATO POINTS</div>
+        <div style="font-size: 0.8rem; color: #a0522d; margin-top: 5px; font-weight: bold;">POTATO POINTS</div>
     </h2>
-    <div id="potato" style="font-size: 120px; cursor: pointer; user-select: none; transition: transform 0.05s; display: inline-block;">🥔</div>
+    <div id="potato" style="font-size: 140px; cursor: pointer; user-select: none; transition: transform 0.05s; display: inline-block;">🥔</div>
 </div>
 
 <button onclick="toggleCredits(true)" class="credits-btn">Credits</button>
@@ -39,79 +39,103 @@
     </div>
 </div>
 
-<div id="god" style="display: none; position: fixed; font-size: 70px; cursor: pointer; z-index: 10; animation: godGlow 0.5s infinite alternate;">👑🥔</div>
+<div id="god" style="display: none; position: fixed; font-size: 80px; cursor: pointer; z-index: 10; animation: godGlow 0.5s infinite alternate;">👑🥔</div>
 
 <div id="creditsOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center;">
-    <div style="background: white; padding: 30px; border-radius: 25px; text-align: center; width: 300px;">
-        <h2 style="color: #8b4513; margin: 0; font-size: 1.3rem;">OFFICIAL CREDITS</h2>
+    <div style="background: white; padding: 35px; border-radius: 25px; text-align: center; width: 320px; box-shadow: 0 0 40px rgba(0,0,0,0.5);">
+        <h2 style="color: #8b4513; margin: 0; font-size: 1.5rem;">OFFICIAL CREDITS</h2>
         <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
-        <div style="margin: 15px 0; line-height: 1.4; font-size: 0.9rem;">
-            <p><strong>Owners & Lead Developers</strong><br><span style="color: #8b4513; font-weight: bold;">Luca & Alex</span></p>
+        <div style="margin: 20px 0; line-height: 1.5;">
+            <p><strong>Owners & Lead Developers</strong><br><span style="font-size: 1.2rem; color: #8b4513; font-weight: bold;">Luca & Alex</span></p>
             <p><strong>Executive Testing Team</strong><br><span style="color: #a0522d; font-weight: bold;">Mom, Dad, & Grandma</span></p>
-            <p style="background: #fffde7; padding: 8px; border-radius: 10px; border: 1px solid #f9f1a0;">
+            <p style="background: #fffde7; padding: 10px; border-radius: 10px; border: 1px solid #f9f1a0;">
                 <strong>The Inspiration</strong><br><i>"The Potato on the Counter"</i>
             </p>
             <p><strong>Code Maker</strong><br>Gemini</p>
         </div>
-        <button onclick="toggleCredits(false)" style="background: #8b4513; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; color: white; width: 100%;">Return to Game</button>
+        <button onclick="toggleCredits(false)" style="background: #8b4513; border: none; padding: 12px 25px; border-radius: 12px; cursor: pointer; font-weight: bold; color: white; width: 100%;">Return to Game</button>
     </div>
 </div>
 
 <style>
-    .main-cookie { width: 150px; height: 150px; background: #d2a679; border-radius: 50%; border: 6px solid #b38659; position: relative; }
-    .mini-potato { width: 30px; height: 20px; background: #e3c18d; border-radius: 50% 40% 50% 45%; position: absolute; border: 2px solid #c5a059; }
-    .credits-btn { position: fixed; bottom: 20px; right: 20px; background: #8b4513; color: white; border: none; padding: 12px 20px; border-radius: 50px; font-weight: bold; z-index: 150; }
+    /* Custom Cookie Styling */
+    .main-cookie { width: 180px; height: 180px; background: #d2a679; border-radius: 50%; border: 8px solid #b38659; position: relative; box-shadow: inset -10px -10px 0 rgba(0,0,0,0.1); }
+    .mini-potato { width: 35px; height: 25px; background: #e3c18d; border-radius: 50% 40% 50% 45%; position: absolute; border: 2px solid #c5a059; box-shadow: 2px 2px 0 rgba(0,0,0,0.1); }
+    
+    .credits-btn { position: fixed; bottom: 20px; right: 20px; background: #8b4513; color: white; border: none; padding: 12px 24px; border-radius: 50px; font-weight: bold; cursor: pointer; }
+    
+    /* Animations */
     .potato-3d-box { position: relative; width: 100px; height: 100px; margin: 0 auto; transform-style: preserve-3d; animation: rotate3D 1s infinite linear; }
-    .p-face { position: absolute; font-size: 80px; user-select: none; }
-    .p-front { transform: translateZ(25px); }
+    .p-face { position: absolute; font-size: 100px; user-select: none; }
+    .p-front { transform: translateZ(30px); }
     .p-mid { transform: translateZ(0px) scale(1.1); filter: brightness(0.8); }
-    .p-back { transform: translateZ(-25px) rotateY(180deg); filter: brightness(0.6); }
+    .p-back { transform: translateZ(-30px) rotateY(180deg); filter: brightness(0.6); }
+
     @keyframes rotate3D { 0% { transform: rotateY(0deg); } 100% { transform: rotateY(360deg); } }
-    @keyframes godGlow { from { filter: drop-shadow(0 0 10px gold); } to { filter: drop-shadow(0 0 25px orange); } }
+    @keyframes godGlow { from { filter: drop-shadow(0 0 10px gold); } to { filter: drop-shadow(0 0 30px orange); } }
     @keyframes cookieRainbow {
-        0% { filter: hue-rotate(0deg) drop-shadow(0 0 40px red); }
-        50% { transform: translate(-50%, -50%) scale(1.05); filter: hue-rotate(180deg) drop-shadow(0 0 60px blue); }
-        100% { filter: hue-rotate(360deg) drop-shadow(0 0 40px red); }
+        0% { filter: hue-rotate(0deg) drop-shadow(0 0 50px red); }
+        50% { transform: translate(-50%, -50%) scale(1.1); filter: hue-rotate(180deg) drop-shadow(0 0 80px blue); }
+        100% { filter: hue-rotate(360deg) drop-shadow(0 0 50px red); }
     }
-    #potato:active { transform: scale(0.95); }
+    #potato:active { transform: scale(0.9); }
     .cookie-shake { animation: shake 0.1s infinite; background-color: white !important; }
-    @keyframes shake { 0% { transform: translate(1px, 1px); } 50% { transform: translate(-1px, -1px); } 100% { transform: translate(1px, -1px); } }
+    @keyframes shake { 0% { transform: translate(2px, 2px); } 50% { transform: translate(-2px, -2px); } 100% { transform: translate(2px, -2px); } }
 </style>
 
 <script>
+    // Using BigInt for infinite scores
     let count = BigInt(localStorage.getItem('potatoPoints') || '0');
     const scoreDisplay = document.getElementById('score');
     const vineBoom = document.getElementById('vineBoom');
 
-    function updateUI() { scoreDisplay.innerText = count.toLocaleString(); }
+    function updateUI() {
+        scoreDisplay.innerText = count.toLocaleString();
+        localStorage.setItem('potatoPoints', count.toString());
+    }
     updateUI();
 
-    document.getElementById('potato').addEventListener('touchstart', (e) => {
-        e.preventDefault(); // Prevents iPad zoom on double tap
-        count++; updateUI();
+    // Works for both Mouse and Touch
+    const handleTap = (e) => {
+        if (e.type === 'touchstart') e.preventDefault();
+        count++;
+        updateUI();
+
         let roll = Math.random();
+        // Spawning Logic
         if (Math.random() < 0.000000000001) { spawnCookie(); }
         else if (roll < 0.0001) { spawn3D(); } 
         else if (roll < 0.10) { spawnGod(); }
-        localStorage.setItem('potatoPoints', count.toString());
-    });
+    };
 
-    function spawnCookie() { vineBoom.play(); document.getElementById('bg').classList.add('cookie-shake'); document.getElementById('cookie').style.display = "block"; }
-    function spawn3D() { if (document.getElementById('threeD').style.display !== "block") { document.getElementById('threeD').style.left = Math.random() * 50 + "vw"; document.getElementById('threeD').style.top = Math.random() * 50 + "vh"; document.getElementById('threeD').style.display = "block"; } }
-    function spawnGod() { if (document.getElementById('god').style.display !== "block") { document.getElementById('god').style.left = Math.random() * 60 + "vw"; document.getElementById('god').style.top = Math.random() * 60 + "vh"; document.getElementById('god').style.display = "block"; } }
+    document.getElementById('potato').addEventListener('mousedown', handleTap);
+    document.getElementById('potato').addEventListener('touchstart', handleTap);
 
-    document.getElementById('god').addEventListener('touchstart', () => { count += 100n; document.getElementById('god').style.display = "none"; save(); });
-    document.getElementById('threeD').addEventListener('touchstart', () => { count += 10000000n; document.getElementById('threeD').style.display = "none"; save(); });
-    document.getElementById('cookie').addEventListener('touchstart', () => {
-        count += 100000000000000000000000n; 
-        document.getElementById('cookie').style.display = "none";
-        document.getElementById('bg').classList.remove('cookie-shake');
-        save();
-        alert("FAMILY LEGACY COLLECTED!");
-    });
+    function spawnCookie() { 
+        vineBoom.play(); 
+        document.getElementById('bg').classList.add('cookie-shake'); 
+        document.getElementById('cookie').style.display = "block"; 
+    }
+    function spawn3D() { 
+        let el = document.getElementById('threeD');
+        if (el.style.display !== "block") {
+            el.style.left = Math.random() * 70 + "vw";
+            el.style.top = Math.random() * 70 + "vh";
+            el.style.display = "block";
+        }
+    }
+    function spawnGod() { 
+        let el = document.getElementById('god');
+        if (el.style.display !== "block") {
+            el.style.left = Math.random() * 70 + "vw";
+            el.style.top = Math.random() * 70 + "vh";
+            el.style.display = "block";
+        }
+    }
 
-    function save() { localStorage.setItem('potatoPoints', count.toString()); updateUI(); }
-    function toggleCredits(show) { document.getElementById('creditsOverlay').style.display = show ? 'flex' : 'none'; }
-</script>
-</body>
-</html>
+    // Special Item Clicks
+    document.getElementById('god').addEventListener('mousedown', () => { count += 100n; document.getElementById('god').style.display = "none"; updateUI(); });
+    document.getElementById('threeD').addEventListener('mousedown', () => { count += 1000000n; document.getElementById('threeD').style.display = "none"; updateUI(); });
+    document.getElementById('cookie').addEventListener('mousedown', () => {
+        count += 1000000000000000000n; 
+        document.getElementById('cookie').style.
