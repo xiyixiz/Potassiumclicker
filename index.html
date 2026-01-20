@@ -138,4 +138,13 @@
     document.getElementById('threeD').addEventListener('mousedown', () => { count += 1000000n; document.getElementById('threeD').style.display = "none"; updateUI(); });
     document.getElementById('cookie').addEventListener('mousedown', () => {
         count += 1000000000000000000n; 
-        document.getElementById('cookie').style.
+        document.getElementById('cookie').style.display = "none";
+        document.getElementById('bg').classList.remove('cookie-shake');
+        updateUI();
+        alert("THE POTATO COOKIE HAS BLESSED YOU!");
+    });
+
+    function toggleCredits(show) { document.getElementById('creditsOverlay').style.display = show ? 'flex' : 'none'; }
+</script>
+</body>
+</html>
